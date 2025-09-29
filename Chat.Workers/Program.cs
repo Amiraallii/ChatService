@@ -1,5 +1,4 @@
 using Chat.Workers;
-using Chat.Workers.Services;
 using Serilog;
 
 var builder = Host.CreateApplicationBuilder(args);
@@ -7,7 +6,7 @@ var builder = Host.CreateApplicationBuilder(args);
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
-    .MinimumLevel.Information()
+    .MinimumLevel.Error()
     .CreateLogger();
 
 builder.Logging.ClearProviders();
